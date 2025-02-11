@@ -4,7 +4,7 @@ const roleControllers = require("../controllers/roleControllers");
 const authenticateToken = require("../middleware/authMiddleware");
 
 
-router.get("/", authenticateToken, roleControllers.getAllRoles);
+router.get("/", roleControllers.getAllRoles);
 router.post("/", authenticateToken, roleControllers.createRole);
 
 
